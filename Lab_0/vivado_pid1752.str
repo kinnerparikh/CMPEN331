@@ -620,3 +620,67 @@ typeControlKey((HResource) null, "testbench.v", 'c'); // be
 selectCodeEditor("testbench.v", 174, 10); // be
 typeControlKey((HResource) null, "testbench.v", 'c'); // be
 typeControlKey((HResource) null, "testbench.v", 'c'); // be
+// HMemoryUtils.trashcanNow. Engine heap size: 1,250 MB. GUI used memory: 80 MB. Current time: 9/6/22, 7:38:52 PM EDT
+// Elapsed time: 220 seconds
+collapseTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design]", 15); // n
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design]", 15); // n
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design, Schematic]", 26, false); // n
+// Tcl Message: open_run synth_1 -name synth_1 
+// Tcl Message: Design is defaulting to impl run constrset: constrs_1 Design is defaulting to synth run part: xc7z010clg400-1 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,282 MB. GUI used memory: 80 MB. Current time: 9/6/22, 7:39:37 PM EDT
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 1,557 MB. GUI used memory: 80 MB. Current time: 9/6/22, 7:39:40 PM EDT
+// [Engine Memory]: 1,557 MB (+256404kb) [00:47:21]
+// [Engine Memory]: 1,688 MB (+55655kb) [00:47:22]
+// TclEventType: DESIGN_NEW
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// DeviceView Instantiated
+// WARNING: HEventQueue.dispatchEvent() is taking  1099 ms.
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: INFO: [Device 21-403] Loading part xc7z010clg400-1 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1608.098 ; gain = 0.000 
+// Tcl Message: INFO: [Project 1-479] Netlist was created with Vivado 2022.1 INFO: [Project 1-570] Preparing netlist for logic optimization INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1695.586 ; gain = 0.000 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// Device view-level: 0.0
+// [GUI Memory]: 153 MB (+7405kb) [00:47:24]
+// Tcl Message: open_run: Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 1846.492 ; gain = 559.520 
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+// [GUI Memory]: 162 MB (+724kb) [00:47:24]
+// Elapsed time: 11 seconds
+dismissDialog("Open Synthesized Design"); // bA
+// RouteApi::initDelayMediator elapsed time: 6.4s
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// Elapsed time: 11 seconds
+floatFrame(PAResourceOtoP.PAViews_SCHEMATIC, "Schematic"); // aA
+// PAResourceOtoP.PAViews_SCHEMATIC: Schematic: float view
+// [Engine Memory]: 2,096 MB (+339568kb) [00:47:36]
+// HMemoryUtils.trashcanNow. Engine heap size: 2,160 MB. GUI used memory: 105 MB. Current time: 9/6/22, 7:40:02 PM EDT
+// PAResourceOtoP.PAViews_SCHEMATIC: Schematic: close view
+// Elapsed time: 68 seconds
+closeFrame(PAResourceOtoP.PAViews_SCHEMATIC, "Schematic"); // aA
+dockFrame(PAResourceOtoP.PAViews_SCHEMATIC, "Schematic"); // aA
+closeView(PAResourceOtoP.PAViews_SCHEMATIC, "Schematic"); // f
+selectCodeEditor("testbench.v", 512, 165); // be
+// [GUI Memory]: 173 MB (+3354kb) [00:48:49]
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design, Schematic]", 27, false); // n
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+selectComboBox(RDIResource.MainWinToolbarMgr_SELECT_OR_SAVE_WINDOW_LAYOUT, "I/O Planning", 1); // m
+// HMemoryUtils.trashcanNow. Engine heap size: 2,195 MB. GUI used memory: 119 MB. Current time: 9/6/22, 7:41:12 PM EDT
+floatFrame(PAResourceOtoP.PAViews_PACKAGE, "Package"); // aA
+// PAResourceOtoP.PAViews_PACKAGE: Package: float view
+selectComboBox(RDIResource.MainWinToolbarMgr_SELECT_OR_SAVE_WINDOW_LAYOUT, "Floorplanning", 2); // m
+dockFrame(PAResourceOtoP.PAViews_PACKAGE, "Package"); // aA
+selectComboBox(RDIResource.MainWinToolbarMgr_SELECT_OR_SAVE_WINDOW_LAYOUT, "Debug", 3); // m
+selectComboBox(RDIResource.MainWinToolbarMgr_SELECT_OR_SAVE_WINDOW_LAYOUT, "Default Layout", 0); // m
+// DeviceView Instantiated
+selectComboBox(RDIResource.MainWinToolbarMgr_SELECT_OR_SAVE_WINDOW_LAYOUT, "I/O Planning", 1); // m
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // F
+// [GUI Memory]: 184 MB (+2656kb) [00:49:29]
+// Elapsed time: 17 seconds
+selectComboBox(RDIResource.MainWinToolbarMgr_SELECT_OR_SAVE_WINDOW_LAYOUT, "Floorplanning", 2); // m
+// Device view-level: 0.0
+unmaximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // F
+// Device view-level: 0.3
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // F
