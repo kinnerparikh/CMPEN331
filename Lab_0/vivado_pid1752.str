@@ -4,11 +4,11 @@ Xilinx Vivado v2022.1 (64-bit) [Major: 2022, Minor: 1]
 SW Build: 3526262 on Mon Apr 18 15:48:16 MDT 2022
 IP Build: 3524634 on Mon Apr 18 20:55:01 MDT 2022
 
-Process ID (PID): 13000
+Process ID (PID): 1752
 License: Customer
 Mode: GUI Mode
 
-Current time: 	Mon Sep 05 21:39:05 EDT 2022
+Current time: 	Tue Sep 06 18:52:30 EDT 2022
 Time zone: 	Eastern Standard Time (America/New_York)
 
 OS: Windows 10
@@ -48,7 +48,7 @@ Vivado layouts directory: \\pass.ad.psu.edu\pass\users\k\s\ksp5368\COEPROFILE\CS
 PlanAhead jar file: 	C:/Xilinx/Vivado/2022.1/lib/classes/planAhead.jar
 Vivado log file: 	C:/Users/ksp5368/Documents/CMPEN331/Lab_0/vivado.log
 Vivado journal file: 	C:/Users/ksp5368/Documents/CMPEN331/Lab_0/vivado.jou
-Engine tmp dir: 	C:/Users/ksp5368/Documents/CMPEN331/Lab_0/.Xil/Vivado-13000-E5-CSE-136-30
+Engine tmp dir: 	C:/Users/ksp5368/Documents/CMPEN331/Lab_0/.Xil/Vivado-1752-E5-CSE-136-30
 
 Xilinx Environment Variables
 ----------------------------
@@ -71,11 +71,10 @@ Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 */
 
 // TclEventType: START_GUI
-// TclEventType: PROJECT_OPEN_DIALOG
 // Tcl Message: start_gui 
 // TclEventType: PROJECT_OPEN_DIALOG
-// [GUI Memory]: 70 MB (+70913kb) [00:00:07]
-// [Engine Memory]: 1,250 MB (+1159158kb) [00:00:07]
+// [GUI Memory]: 75 MB (+75643kb) [00:00:08]
+// [Engine Memory]: 1,250 MB (+1159064kb) [00:00:08]
 // Opening Vivado Project: C:\Users\ksp5368\Documents\CMPEN331\Lab_0\Lab_0.xpr. Version: Vivado v2022.1 
 // TclEventType: DEBUG_PROBE_SET_CHANGE
 // TclEventType: FLOW_ADDED
@@ -83,6 +82,8 @@ Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // TclEventType: MSGMGR_MOVEMSG
 // TclEventType: FILE_SET_CHANGE
 // TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
 // TclEventType: RUN_CURRENT
 // TclEventType: PROJECT_DASHBOARD_NEW
 // TclEventType: PROJECT_DASHBOARD_GADGET_NEW
@@ -101,14 +102,12 @@ Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // Tcl Message: open_project C:/Users/ksp5368/Documents/CMPEN331/Lab_0/Lab_0.xpr 
 // Tcl Message: INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/ksp5368/Documents/CMPEN331/Lab_0/Lab_0.gen/sources_1'. 
 // Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
 // TclEventType: PROJECT_NEW
-// [GUI Memory]: 79 MB (+6053kb) [00:00:12]
-// WARNING: HEventQueue.dispatchEvent() is taking  1769 ms.
-// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.1/data/ip'. 
-// HMemoryUtils.trashcanNow. Engine heap size: 1,250 MB. GUI used memory: 64 MB. Current time: 9/5/22, 9:39:08 PM EDT
+// [GUI Memory]: 88 MB (+10728kb) [00:00:14]
+// WARNING: HEventQueue.dispatchEvent() is taking  1984 ms.
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.1/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,250 MB. GUI used memory: 65 MB. Current time: 9/6/22, 6:52:33 PM EDT
 // Project name: Lab_0; location: C:/Users/ksp5368/Documents/CMPEN331/Lab_0; part: xc7z010clg400-1
-// Tcl Message: open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:07 . Memory (MB): peak = 1235.781 ; gain = 0.000 
+// Tcl Message: open_project: Time (s): cpu = 00:00:20 ; elapsed = 00:00:07 . Memory (MB): peak = 1244.988 ; gain = 9.117 
 dismissDialog("Open Project"); // bA
-// [GUI Memory]: 124 MB (+42658kb) [00:00:16]
-// Tcl Message: update_compile_order -fileset sources_1 
-// HMemoryUtils.trashcanNow. Engine heap size: 1,250 MB. GUI used memory: 70 MB. Current time: 9/5/22, 10:09:11 PM EDT
