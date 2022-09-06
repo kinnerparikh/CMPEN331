@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Mon Sep  5 22:19:16 2022
+# Process ID: 2960
+# Current directory: C:/Users/ksp5368/Documents/CMPEN331/Lab_0/Lab_0.runs/synth_1
+# Command line: vivado.exe -log counter.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source counter.tcl
+# Log file: C:/Users/ksp5368/Documents/CMPEN331/Lab_0/Lab_0.runs/synth_1/counter.vds
+# Journal file: C:/Users/ksp5368/Documents/CMPEN331/Lab_0/Lab_0.runs/synth_1\vivado.jou
+# Running On: E5-CSE-136-30, OS: Windows, CPU Frequency: 2904 MHz, CPU Physical cores: 8, Host memory: 16888 MB
+#-----------------------------------------------------------
+source counter.tcl -notrace
