@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.1.18)  6 SEP 2022 19:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.1.18)  6 SEP 2022 19:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -124,20 +124,25 @@ Overfull \hbox (56.1734pt too wide) in paragraph at lines 3--4
 
 [1
 
-{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]) [2] (/Users/kinner/Documents/School/CMPEN331/Lab_0_Report/report.aux) ) 
+{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]) [2] (/Users/kinner/Documents/School/CMPEN331/Lab_0_Report/testbench.txt
+Overfull \hbox (0.98541pt too wide) in paragraph at lines 10--11
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+) [3] (/Users/kinner/Documents/School/CMPEN331/Lab_0_Report/report.aux) ) 
 Here is how much of TeX's memory you used:
- 2306 strings out of 478994
- 32727 string characters out of 5858184
+ 2311 strings out of 478994
+ 32899 string characters out of 5858184
  360953 words of memory out of 5000000
- 19829 multiletter control sequences out of 15000+600000
+ 19831 multiletter control sequences out of 15000+600000
  407538 words of font info for 41 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  52i,6n,60p,206b,1523s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on /Users/kinner/Documents/School/CMPEN331/Lab_0_Report/report.pdf (2 pages, 54992 bytes).
+Output written on /Users/kinner/Documents/School/CMPEN331/Lab_0_Report/report.pdf (3 pages, 57508 bytes).
 PDF statistics:
- 31 PDF objects out of 1000 (max. 8388607)
- 21 compressed objects within 1 object stream
+ 34 PDF objects out of 1000 (max. 8388607)
+ 23 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

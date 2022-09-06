@@ -1,3 +1,4 @@
+// TESTBENCH -> Author: provided
 module testbench();
     reg clrn_tb;
     reg clk_tb;
