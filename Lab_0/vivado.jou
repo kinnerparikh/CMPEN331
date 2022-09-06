@@ -12,3 +12,6 @@
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/ksp5368/Documents/CMPEN331/Lab_0/Lab_0.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source testbench.tcl
