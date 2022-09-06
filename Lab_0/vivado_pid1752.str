@@ -610,3 +610,13 @@ selectCodeEditor("src.v", 210, 138); // be
 selectCodeEditor("src.v", 245, 244); // be
 selectCodeEditor("src.v", 244, 244, false, false, false, true, false); // be - Popup Trigger
 selectCodeEditor("src.v", 744, 332); // be
+// Elapsed time: 819 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "testbench.v", 1); // m
+selectCodeEditor("testbench.v", 206, 329); // be
+selectCodeEditor("testbench.v", 3, 214); // be
+typeControlKey((HResource) null, "testbench.v", 'c'); // be
+typeControlKey((HResource) null, "testbench.v", 'c'); // be
+typeControlKey((HResource) null, "testbench.v", 'c'); // be
+selectCodeEditor("testbench.v", 174, 10); // be
+typeControlKey((HResource) null, "testbench.v", 'c'); // be
+typeControlKey((HResource) null, "testbench.v", 'c'); // be
