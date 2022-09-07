@@ -185,6 +185,8 @@ OUTPUT /Users/kinner/Documents/School/CMPEN331/Lab_0_Report/report.pdf
 INPUT /usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
 INPUT /Users/kinner/Documents/School/CMPEN331/Lab_0_Report/this.txt
 INPUT /Users/kinner/Documents/School/CMPEN331/Lab_0_Report/this.txt
@@ -198,8 +200,6 @@ INPUT /Users/kinner/Documents/School/CMPEN331/Lab_0_Report/testbench.txt
 INPUT /Users/kinner/Documents/School/CMPEN331/Lab_0_Report/testbench.txt
 INPUT /Users/kinner/Documents/School/CMPEN331/Lab_0_Report/testbench.txt
 INPUT /Users/kinner/Documents/School/CMPEN331/Lab_0_Report/testbench.txt
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT /Users/kinner/Documents/School/CMPEN331/Lab_0_Report/./images//timingdiag.jpg
 INPUT /Users/kinner/Documents/School/CMPEN331/Lab_0_Report/./images//timingdiag.jpg
 INPUT /Users/kinner/Documents/School/CMPEN331/Lab_0_Report/./images//timingdiag.jpg

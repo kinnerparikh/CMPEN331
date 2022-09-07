@@ -1,11 +1,11 @@
 # Fdb version 3
-["pdflatex"] 1662508602 "/Users/kinner/Documents/School/CMPEN331/Lab_0_Report/report.tex" "/Users/kinner/Documents/School/CMPEN331/Lab_0_Report/report.pdf" "report" 1662508605
+["pdflatex"] 1662516818 "/Users/kinner/Documents/School/CMPEN331/Lab_0_Report/report.tex" "/Users/kinner/Documents/School/CMPEN331/Lab_0_Report/report.pdf" "report" 1662516818
   "./images//floorplanning.jpg" 1662507743 78060 c85adb54a8dc5ecda4b608f95290824e ""
   "./images//ioplanning.jpg" 1662507743 163750 3f92ead823795ccf5685f56b336a2955 ""
   "./images//schematic.jpg" 1662507743 128583 d9882176942214d8c8d3d364d21052b8 ""
   "./images//timingdiag.jpg" 1662507951 175700 dde9efef77a57112c6fe2012a5a8734f ""
-  "/Users/kinner/Documents/School/CMPEN331/Lab_0_Report/report.aux" 1662508603 391 7f97c6e25ca0d4aa675caced39de0be3 ""
-  "/Users/kinner/Documents/School/CMPEN331/Lab_0_Report/report.tex" 1662508602 1507 67c4fa0b00ce116a70eb51136b5aaebc ""
+  "/Users/kinner/Documents/School/CMPEN331/Lab_0_Report/report.aux" 1662516818 391 7f97c6e25ca0d4aa675caced39de0be3 ""
+  "/Users/kinner/Documents/School/CMPEN331/Lab_0_Report/report.tex" 1662516817 2760 805ea7fa97eaeb160e6d6b24dcc8d381 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm" 1136768653 1528 abec98dbc43e172678c11b3b9031252a ""
@@ -53,13 +53,13 @@
   "images//ioplanning.jpg" 1662507743 163750 3f92ead823795ccf5685f56b336a2955 ""
   "images//schematic.jpg" 1662507743 128583 d9882176942214d8c8d3d364d21052b8 ""
   "images//timingdiag.jpg" 1662507951 175700 dde9efef77a57112c6fe2012a5a8734f ""
-  "report.aux" 1662508603 391 7f97c6e25ca0d4aa675caced39de0be3 "pdflatex"
-  "report.tex" 1662508602 1507 67c4fa0b00ce116a70eb51136b5aaebc ""
+  "report.aux" 1662516818 391 7f97c6e25ca0d4aa675caced39de0be3 "pdflatex"
+  "report.tex" 1662516817 2760 805ea7fa97eaeb160e6d6b24dcc8d381 ""
   "testbench.txt" 1662508576 524 c6011b00cf5853fd313b2736f6605a69 ""
   "this.txt" 1662507227 1885 b34707ad141d87671cf13dfa9d4f3301 ""
   (generated)
-  "report.aux"
   "report.log"
   "/Users/kinner/Documents/School/CMPEN331/Lab_0_Report/report.pdf"
   "report.pdf"
   "/Users/kinner/Documents/School/CMPEN331/Lab_0_Report/report.log"
+  "report.aux"
