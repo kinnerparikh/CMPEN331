@@ -1,0 +1,8 @@
+0.7
+2020.2
+Apr 18 2022
+16:05:34
+C:/Users/ksp5368/Documents/CMPEN331/Lab2/Lab2.sim/sim_1/behav/xsim/glbl.v,1649976174,verilog,,,,glbl,,,,,,,,
+C:/Users/ksp5368/Documents/CMPEN331/Lab2/Lab2.srcs/sources_1/new/Design.v,1667875227,verilog,,C:/Users/ksp5368/Documents/CMPEN331/Lab2/Lab2.srcs/sources_1/new/Modules.v,,DataPath,,,,,,,,
+C:/Users/ksp5368/Documents/CMPEN331/Lab2/Lab2.srcs/sources_1/new/Modules.v,1667875325,verilog,,C:/Users/ksp5368/Documents/CMPEN331/Lab2/Lab2.srcs/sources_1/new/testbench.v,,ControlUnit;IDEXEPipelineReg;IFIDPipelineReg;ImmExtender;InstructionMemory;PC;PCAdder;RegFile;RegrtMux,,,,,,,,
+C:/Users/ksp5368/Documents/CMPEN331/Lab2/Lab2.srcs/sources_1/new/testbench.v,1667875132,verilog,,,,testbench,,,,,,,,
