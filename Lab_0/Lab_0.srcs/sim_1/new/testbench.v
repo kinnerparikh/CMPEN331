@@ -20,7 +20,26 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module testbench(
-
-    );
+// Module      : Testbench
+// Description : Using the test sequence given generate the output of the 7 segment display by calling dff3 and counter modules
+module testbench();
+    reg clrn_tb;
+    reg clk_tb;
+    reg u_tb;
+    wire [2:0] q_tb;
+    wire [2:0] ns_tb;
+    wire a,b,c,d,e,f,g;
+    dff3 dff3_tb(ns_tb, clrn_tb, clk_tb, q_tb);
+    counter counter_tb(q_tb, u_tb, ns_tb, a, b, c, d, e, f, g);
+    initial begin
+        clrn_tb = 0;        
+        clk_tb = 1;
+        u_tb = 1; 
+        #1 clrn_tb = 1;
+        #16 u_tb = 0;        
+    end   
+    always begin
+        #1;
+        clk_tb = ~clk_tb;
+    end
 endmodule
