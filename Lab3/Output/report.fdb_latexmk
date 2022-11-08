@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1667879957 "/Users/kinner/Documents/School/CMPEN331/Lab3/Output/report.tex" "/Users/kinner/Documents/School/CMPEN331/Lab3/Output/report.pdf" "report" 1667879958
-  "/Users/kinner/Documents/School/CMPEN331/Lab3/Output/report.aux" 1667879958 475 17ca8282e372c53e4bb69b2d6004c67c ""
-  "/Users/kinner/Documents/School/CMPEN331/Lab3/Output/report.tex" 1667879930 1581 0f1dc493fb676eb59cb98e625ce12458 ""
+["pdflatex"] 1667949411 "/Users/kinner/Documents/School/CMPEN331/Lab3/Output/report.tex" "/Users/kinner/Documents/School/CMPEN331/Lab3/Output/report.pdf" "report" 1667949412
+  "/Users/kinner/Documents/School/CMPEN331/Lab3/Output/report.aux" 1667949412 475 17ca8282e372c53e4bb69b2d6004c67c ""
+  "/Users/kinner/Documents/School/CMPEN331/Lab3/Output/report.tex" 1667949411 1575 d7ea11cf089689a907ea6a388c3cf52a ""
   "/usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm" 1136768653 1528 abec98dbc43e172678c11b3b9031252a ""
@@ -50,13 +50,13 @@
   "IOPlan.png" 1667879674 48553 0d931e910850ffbe111952af32a24f45 ""
   "Modules.v" 1667879858 3300 aeaab45e632505d339233a09416cedf2 ""
   "Schematic.png" 1667879674 3198 6149616dfcf2f136b411ddb7d8da410b ""
-  "report.aux" 1667879958 475 17ca8282e372c53e4bb69b2d6004c67c "pdflatex"
-  "report.tex" 1667879930 1581 0f1dc493fb676eb59cb98e625ce12458 ""
+  "report.aux" 1667949412 475 17ca8282e372c53e4bb69b2d6004c67c "pdflatex"
+  "report.tex" 1667949411 1575 d7ea11cf089689a907ea6a388c3cf52a ""
   "testbench.v" 1667879957 495 1074b3f814912b9cbacef5410e482e0d ""
   "timing.png" 1667879674 26190 a9ce2f29d6b7c007e30043d7ba0c5d81 ""
   (generated)
-  "/Users/kinner/Documents/School/CMPEN331/Lab3/Output/report.pdf"
-  "report.log"
-  "/Users/kinner/Documents/School/CMPEN331/Lab3/Output/report.log"
   "report.aux"
   "report.pdf"
+  "report.log"
+  "/Users/kinner/Documents/School/CMPEN331/Lab3/Output/report.pdf"
+  "/Users/kinner/Documents/School/CMPEN331/Lab3/Output/report.log"
