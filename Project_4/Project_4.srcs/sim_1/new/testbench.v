@@ -30,7 +30,32 @@ module testbench();
     wire [4:0] edestReg;
     wire [31:0] eqa, eqb, eimm32;
     
-    DataPath dp_tb(clk_tb, pc, dinstOut, ewreg, em2reg, ewmem, ealuimm, ealuc, edestReg, eqa, eqb, eimm32);
+    wire mwreg, mm2reg, mwmem;
+    wire [4:0] mdestReg;
+    wire [31:0] mr, mqb;
+    
+    wire wwreg, wm2reg;
+    wire [4:0] wdestReg;
+    wire [31:0] wr, wdo;
+    
+    DataPath dp_tb (
+        clk_tb,
+        
+        pc, dinstOut,
+        ewreg, em2reg, ewmem, ealuimm,
+        ealuc,
+        edestReg,
+        eqa, eqb, eimm32,
+            
+        mwreg, mm2reg, mwmem,
+        mdestReg,
+        mr, mqb,
+            
+        wwreg, wm2reg,
+        wdestReg,
+        wr, wdo
+    );
+    //DataPath dp_tb(clk_tb, pc, dinstOut, ewreg, em2reg, ewmem, ealuimm, ealuc, edestReg, eqa, eqb, eimm32);
     
     always
     begin

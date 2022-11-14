@@ -184,15 +184,15 @@ module ALU(
     input [31:0] eqa, b,
     input [3:0] ealuc,
     
-    output [31:0] r
+    output reg [31:0] r
 );
     always @(*)
     begin
         case(ealuc)
             'b0010:
-                r = eqa + b;
+                r <= eqa + b;
             'b0110:
-                r = eqa - b;
+                r <= eqa - b;
         endcase
     end
 endmodule
@@ -226,16 +226,16 @@ module DataMemory(
     reg [31:0] memory[0:31];
     
     initial begin
-        memory[0] <= hA00000AA;
-        memory[1] <= h10000011;
-        memory[2] <= h20000022;
-        memory[3] <= h30000033;
-        memory[4] <= h40000044;
-        memory[5] <= h50000055;
-        memory[6] <= h60000066;
-        memory[7] <= h70000077;
-        memory[8] <= h80000088;
-        memory[9] <= h90000099; 
+        memory[0] <= 'hA00000AA;
+        memory[1] <= 'h10000011;
+        memory[2] <= 'h20000022;
+        memory[3] <= 'h30000033;
+        memory[4] <= 'h40000044;
+        memory[5] <= 'h50000055;
+        memory[6] <= 'h60000066;
+        memory[7] <= 'h70000077;
+        memory[8] <= 'h80000088;
+        memory[9] <= 'h90000099; 
      end
     
     //reading from memory
@@ -263,10 +263,10 @@ module MEMWBPipelineReg (
 );
     always @(posedge clk)
     begin
-        mwreg    <= wwreg;
-        mm2reg   <= wm2reg;
-        mdestReg <= wdestReg;
-        mr       <= wr;
-        mdo      <= wdo;
+        wwreg    <= mwreg;
+        wm2reg   <= mm2reg;
+        wdestReg <= mdestReg;
+        wr       <= mr;
+        wdo      <= mdo;
     end
 endmodule

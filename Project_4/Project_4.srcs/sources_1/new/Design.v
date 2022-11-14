@@ -26,7 +26,15 @@ module DataPath(
     output wire ewreg, em2reg, ewmem, ealuimm,
     output wire [3:0] ealuc,
     output wire [4:0] edestReg,
-    output wire [31:0] eqa, eqb, eimm32
+    output wire [31:0] eqa, eqb, eimm32,
+    
+    output wire mwreg, mm2reg, mwmem,
+    output wire [4:0] mdestReg,
+    output wire [31:0] mr, mqb,
+    
+    output wire wwreg, wm2reg, 
+    output wire [4:0] wdestReg,
+    output wire [31:0] wr, wdo
 );
     wire [31:0] nextPc;
     PC pc_dp(nextPc, clk, pc);
@@ -56,5 +64,18 @@ module DataPath(
     wire [31:0] imm32;
     ImmExtender immex_dp(imm, imm32);
     
-    IDEXEPipelineReg idexereg_dp(wreg, m2reg, wmem, aluimm, clk, aluc, destReg, qa, qb, imm32, ewreg, em2reg, ewmem, ealuimm, ealuc, edestReg, eqa, eqb, eimm32); 
+    IDEXEPipelineReg idexereg_dp(wreg, m2reg, wmem, aluimm, clk, aluc, destReg, qa, qb, imm32, ewreg, em2reg, ewmem, ealuimm, ealuc, edestReg, eqa, eqb, eimm32);
+    
+    wire [31:0] b;
+    ALUMux alumux_dp(eqb, eimm32, ealuimm, b);
+    
+    wire [31:0] r;
+    ALU alu_dp(eqa, b, ealuc, r);
+    
+    EXEMEMPipelineReg exememreg_dp(clk, ewreg, em2reg, ewmem, edestReg, r, eqb, mwreg, mm2reg, mwmem, mdestReg, mr, mqb);
+    
+    wire [31:0] mdo;
+    DataMemory datamem_dp(clk, mwmem, mr, mqb, mdo);
+    
+    MEMWBPipelineReg memwbreb_dp(clk, mwreg, mm2reg, mdestReg, mr, mdo, wwreg, wm2reg, wdestReg, wr, wdo);
 endmodule
