@@ -126,9 +126,16 @@ module RegFile(
     output reg [31:0] qa, qb
 );
     reg [31:0] registers[0:31];
+    initial registers[0] = 0;
+    
     always @(*)
     begin
-        qa = registers[rs];
+        if (rs != 1) 
+        begin
+            qa = registers[rs];
+        end
+        //qa = registers[rs];
+        qa = 32'b0;
         qb = registers[rt];
     end
 endmodule
