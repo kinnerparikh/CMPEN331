@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Thu Nov 17 17:10:57 2022
+# Process ID: 15104
+# Current directory: C:/Users/ksp5368/Documents/CMPEN331/Project_4/Project_4.runs/synth_1
+# Command line: vivado.exe -log DataPath.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source DataPath.tcl
+# Log file: C:/Users/ksp5368/Documents/CMPEN331/Project_4/Project_4.runs/synth_1/DataPath.vds
+# Journal file: C:/Users/ksp5368/Documents/CMPEN331/Project_4/Project_4.runs/synth_1\vivado.jou
+# Running On: E5-CSE-136-26, OS: Windows, CPU Frequency: 2904 MHz, CPU Physical cores: 8, Host memory: 16888 MB
+#-----------------------------------------------------------
+source DataPath.tcl -notrace

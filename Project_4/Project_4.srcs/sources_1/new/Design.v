@@ -58,6 +58,9 @@ module DataPath(
     wire [4:0] destReg;
     
     RegrtMux regrtmux_dp(rt, rd, regrt, destReg);
+    
+    wire [31:0] qa;
+    wire [31:0] qb;
     RegFile rf_dp(rs, rt, qa, qb);
     
     wire [15:0] imm = dinstOut[15:0];

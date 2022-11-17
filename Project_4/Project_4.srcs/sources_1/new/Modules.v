@@ -40,10 +40,10 @@ module InstructionMemory(
     reg [31:0] memory [63:0];
     
     initial begin
-        memory[25] <= {6'b100011, 5'b00001, 5'b00010, 16'h0000};
-        memory[26] <= {6'b100011, 5'b00001, 5'b00011, 16'h0004};
-        memory[27] <= {6'b100011, 5'b00001, 5'b00100, 16'h0008};
-        memory[28] <= {6'b100011, 5'b00001, 5'b00101, 16'h000c};
+        memory[25] = {6'b100011, 5'b00001, 5'b00010, 16'h0000};
+        memory[26] = {6'b100011, 5'b00001, 5'b00011, 16'h0004};
+        memory[27] = {6'b100011, 5'b00001, 5'b00100, 16'h0008};
+        memory[28] = {6'b100011, 5'b00001, 5'b00101, 16'h000c};
     end
     
     always @(*)
@@ -126,16 +126,14 @@ module RegFile(
     output reg [31:0] qa, qb
 );
     reg [31:0] registers[0:31];
-    initial registers[0] = 0;
-    
+    initial begin
+        registers[0] = 0;
+        registers[1] = 0;
+    end
+     
     always @(*)
     begin
-        if (rs != 1) 
-        begin
-            qa = registers[rs];
-        end
-        //qa = registers[rs];
-        qa = 32'b0;
+        qa = registers[rs];
         qb = registers[rt];
     end
 endmodule
@@ -233,16 +231,16 @@ module DataMemory(
     reg [31:0] memory[0:31];
     
     initial begin
-        memory[0] <= 'hA00000AA;
-        memory[1] <= 'h10000011;
-        memory[2] <= 'h20000022;
-        memory[3] <= 'h30000033;
-        memory[4] <= 'h40000044;
-        memory[5] <= 'h50000055;
-        memory[6] <= 'h60000066;
-        memory[7] <= 'h70000077;
-        memory[8] <= 'h80000088;
-        memory[9] <= 'h90000099; 
+        memory[0] = 'hA00000AA;
+        memory[1] = 'h10000011;
+        memory[2] = 'h20000022;
+        memory[3] = 'h30000033;
+        memory[4] = 'h40000044;
+        memory[5] = 'h50000055;
+        memory[6] = 'h60000066;
+        memory[7] = 'h70000077;
+        memory[8] = 'h80000088;
+        memory[9] = 'h90000099; 
      end
     
     //reading from memory
