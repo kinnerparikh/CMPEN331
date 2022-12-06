@@ -133,8 +133,7 @@ module RegFile(
     integer i;
     initial begin
         for (i = 0; i < 32; i = i+1)
-            registers[i] = 0;
-        //registers[10] = 3;
+            registers[i] = 32'b0;
     end
      
     always @(*)
