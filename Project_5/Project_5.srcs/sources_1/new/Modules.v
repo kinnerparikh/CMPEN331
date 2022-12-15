@@ -71,7 +71,8 @@ endmodule
 module ControlUnit(
     input [5:0] op, func,
     output reg wreg, m2reg, wmem, aluimm, regrt,
-    output reg [3:0] aluc
+    output reg [3:0] aluc,
+    output reg [1:0] fwa, fwb
 );
     always @(*)
     begin
@@ -104,7 +105,31 @@ module ControlUnit(
                 regrt  = 'b1;
              end
          endcase
+
+        // forwarding logic
+        fwa = 'b00;
+        fwb = 'b00;
+        if (edestReg == rs) 
+            fwa = 'b01;
+        if (edestReg == rt) 
+            fwb = 'b01;
+        
+        if (mdestReg == rs)
+        begin
+            if (mm2reg == 1) 
+                fwa = 'b11;
+            else 
+                fwa = 'b10;
+        end
+        if (mdestReg == rt)
+        begin
+            if (mm2reg == 1) 
+                fwb = 'b11;
+            else 
+                fwb = 'b10;
+        end
     end
+
 endmodule
 
 module RegrtMux(
@@ -158,7 +183,7 @@ module ImmExtender(
 endmodule
 
 module IDEXEPipelineReg(
-    input wreg, m2reg, wmem, aluimm, clk,
+    input clk, wreg, m2reg, wmem, aluimm,
     input [3:0] aluc,
     input [4:0] destReg,
     input [31:0] qa, qb, imm32,
@@ -300,5 +325,24 @@ module WbMux (
         else
             wbData = wr;
     end
-    
+endmodule
+
+module FwMux (
+    input [31:0] q, r, mr, mdo,
+    input [1:0] fwd,
+    output reg [31:0] fq
+)
+    always @(*)
+    begin
+        case(fwd)
+            2'b00:
+                fq = q;
+            2'b01:
+                fq = r;
+            2'b10:
+                fq = mr;
+            2'b11:
+                fq = mdo;
+        endcase
+    end
 endmodule

@@ -50,7 +50,8 @@ module DataPath(
     wire [5:0] func = dinstOut[5:0];    
     wire wreg, m2reg, wmem, aluimm, regrt;
     wire [3:0] aluc;
-    ControlUnit cu_dp(op, func, wreg, m2reg, wmem, aluimm, regrt, aluc);
+    wire [1:0] fwa, fwb;
+    ControlUnit cu_dp(op, func, wreg, m2reg, wmem, aluimm, regrt, aluc, fwa, fwb);
     
     wire [4:0] rs = dinstOut[25:21];
     wire [4:0] rt = dinstOut[20:16];
@@ -67,7 +68,7 @@ module DataPath(
     wire [31:0] imm32;
     ImmExtender immex_dp(imm, imm32);
     
-    IDEXEPipelineReg idexereg_dp(wreg, m2reg, wmem, aluimm, clk, aluc, destReg, qa, qb, imm32, ewreg, em2reg, ewmem, ealuimm, ealuc, edestReg, eqa, eqb, eimm32);
+    IDEXEPipelineReg idexereg_dp(clk, wreg, m2reg, wmem, aluimm, aluc, destReg, qa, qb, imm32, ewreg, em2reg, ewmem, ealuimm, ealuc, edestReg, eqa, eqb, eimm32);
     
     wire [31:0] b;
     ALUMux alumux_dp(eqb, eimm32, ealuimm, b);
@@ -83,4 +84,7 @@ module DataPath(
     MEMWBPipelineReg memwbreb_dp(clk, mwreg, mm2reg, mdestReg, mr, mdo, wwreg, wm2reg, wdestReg, wr, wdo);
 
     WbMux wbmux_dp(wr, wdo, wm2reg);
+
+    FwMux fwmuxa_dp(qa, r, mr, mdo, fwa, qa);
+    FwMux fwmuxb_dp(qb, r, mr, mdo, fwb, qb);
 endmodule
