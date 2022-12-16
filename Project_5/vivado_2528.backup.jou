@@ -1,0 +1,19 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Thu Dec 15 18:38:48 2022
+# Process ID: 2528
+# Current directory: C:/Users/ksp5368/Documents/CMPEN331/Project_5
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8832 C:\Users\ksp5368\Documents\CMPEN331\Project_5\Project_5.xpr
+# Log file: C:/Users/ksp5368/Documents/CMPEN331/Project_5/vivado.log
+# Journal file: C:/Users/ksp5368/Documents/CMPEN331/Project_5\vivado.jou
+# Running On: E5-CSE-136-29, OS: Windows, CPU Frequency: 2904 MHz, CPU Physical cores: 8, Host memory: 16888 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/ksp5368/Documents/CMPEN331/Project_5/Project_5.xpr
+launch_simulation
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
