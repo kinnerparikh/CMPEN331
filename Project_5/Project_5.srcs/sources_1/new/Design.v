@@ -22,7 +22,7 @@
 
 module DataPath(
     input clk,
-    output wire [31:0] pc, dinstOut,
+    output wire [31:0] pc, instOut, dinstOut,
     output wire ewreg, em2reg, ewmem, ealuimm,
     output wire [3:0] ealuc,
     output wire [4:0] edestReg,
@@ -31,17 +31,20 @@ module DataPath(
     output wire mwreg, mm2reg, mwmem,
     output wire [4:0] mdestReg,
     output wire [31:0] mr, mqb,
+
+    output wire [4:0] ors, ort,
     
     output wire wwreg, wm2reg, 
     output wire [4:0] wdestReg,
-    output wire [31:0] wr, wdo
+    output wire [31:0] wr, wdo, wbData,
+    
+    output wire [1:0] fwa, fwb 
 );
     wire [31:0] nextPc;
     PC pc_dp(nextPc, clk, pc);
     
     PCAdder pcadder_dp(pc, nextPc);
-    
-    wire [31:0] instOut;
+
     InstructionMemory im_dp(pc, instOut);
     
     IFIDPipelineReg ifidreg_dp(instOut, clk, dinstOut);
@@ -50,19 +53,18 @@ module DataPath(
     wire [5:0] func = dinstOut[5:0];    
     wire wreg, m2reg, wmem, aluimm, regrt;
     wire [3:0] aluc;
-    wire [1:0] fwa, fwb;
-    ControlUnit cu_dp(op, func, wreg, m2reg, wmem, aluimm, regrt, aluc, fwa, fwb);
-    
+
     wire [4:0] rs = dinstOut[25:21];
     wire [4:0] rt = dinstOut[20:16];
     wire [4:0] rd = dinstOut[15:11];
-    wire [4:0] destReg;
+
+    ControlUnit cu_dp(op, func, rs, rt, mdestReg, edestReg, mm2reg, mwreg, em2reg, ewreg, wreg, m2reg, wmem, aluimm, regrt, aluc, fwa, fwb, ors, ort);
     
-    RegrtMux regrtmux_dp(rt, rd, regrt, destReg);
-    
+      
     wire [31:0] qa;
     wire [31:0] qb;
-    RegFile rf_dp(clk, wwreg, rs, rt, wdestReg, wbData, qa, qb);
+    FwMux fwmuxa_dp(fqa, r, mr, mdo, fwa, qa);
+    FwMux fwmuxb_dp(fqb, r, mr, mdo, fwb, qb);
     
     wire [15:0] imm = dinstOut[15:0];
     wire [31:0] imm32;
@@ -83,8 +85,12 @@ module DataPath(
     
     MEMWBPipelineReg memwbreb_dp(clk, mwreg, mm2reg, mdestReg, mr, mdo, wwreg, wm2reg, wdestReg, wr, wdo);
 
-    WbMux wbmux_dp(wr, wdo, wm2reg);
+    WbMux wbmux_dp(wr, wdo, wm2reg, wbData);
 
-    FwMux fwmuxa_dp(qa, r, mr, mdo, fwa, qa);
-    FwMux fwmuxb_dp(qb, r, mr, mdo, fwb, qb);
+    wire [4:0] destReg;
+    RegrtMux regrtmux_dp(rt, rd, regrt, destReg);
+
+    wire [31:0] fqa;
+    wire [31:0] fqb;
+    RegFile rf_dp(clk, wwreg, rs, rt, wdestReg, wbData, fqa, fqb);
 endmodule

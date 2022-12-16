@@ -40,15 +40,15 @@ module InstructionMemory(
     reg [31:0] memory [63:0];
     
     initial begin
-        memory[25] = {6'b100011, 5'b00001, 5'b00010, 16'h0000};
-        memory[26] = {6'b100011, 5'b00001, 5'b00011, 16'h0004};
-        memory[27] = {6'b100011, 5'b00001, 5'b00100, 16'h0008};
-        memory[28] = {6'b100011, 5'b00001, 5'b00101, 16'h000c};
-        memory[29] = {6'b000000, 5'b00010, 5'b01010, 5'b00110, 5'b0, 6'b100000};
+        memory[25] = 32'h00221820; //add 3, 1, 2
+        memory[26] = 32'h01232022; //sub 4, 9, 3
+        memory[27] = 32'h00692825; //or
+        memory[28] = 32'h00693026; //xor
+        memory[29] = 32'h00693824; //and
     end
     
     always @(*)
-        instOut <= memory[pc[7:2]];
+        instOut = memory[pc[7:2]];
 endmodule
 
 module PCAdder(
@@ -70,43 +70,49 @@ endmodule
 
 module ControlUnit(
     input [5:0] op, func,
+    input [4:0] rs, rt, mdestReg, edestReg,
+    input mm2reg, mwreg, em2reg, ewreg,
     output reg wreg, m2reg, wmem, aluimm, regrt,
     output reg [3:0] aluc,
-    output reg [1:0] fwa, fwb
+    output reg [1:0] fwa, fwb,
+    output reg [4:0] ors, ort
 );
     always @(*)
     begin
+        ors = rs;
+        ort = rt;
         case(op)
-            'b000000: //r-type
-             begin
-                wreg   = 'b1;
-                m2reg  = 'b0;
-                wmem   = 'b0;
-                aluimm = 'b0;
-                regrt  = 'b0;
-                case(func)
-                    'b100000: //add
-                    begin
-                        aluc = 'b0010;
-                    end
-                    'b100010: //sub
-                    begin
-                        aluc = 'b0110;
-                    end
-                endcase
-             end
-             'b100011: //lw
-             begin
-                wreg   = 'b1;
-                m2reg  = 'b1;
-                wmem   = 'b0;
-                aluc   = 'b0010;
-                aluimm = 'b1;
-                regrt  = 'b1;
-             end
-         endcase
+        'b000000: //r-type
+        begin
+            wreg   = 'b1;
+            m2reg  = 'b0;
+            wmem   = 'b0;
+            aluimm = 'b0;
+            regrt  = 'b0;
+            case(func)
+                'b100000: //add
+                    aluc = 'b0010;
+                'b100010: //sub
+                    aluc = 'b0110;
+                'b100100: //and
+                    aluc = 'b1000;
+                'b100101: //or
+                    aluc = 'b1001;
+                'b100110: //xor
+                    aluc = 'b1010;
+            endcase
+         end
+         'b100011: //lw
+         begin
+            wreg   = 'b1;
+            m2reg  = 'b1;
+            wmem   = 'b0;
+            aluc   = 'b0010;
+            aluimm = 'b1;
+            regrt  = 'b1;
+         end
+        endcase
 
-        // forwarding logic
         fwa = 'b00;
         fwb = 'b00;
         if (edestReg == rs) 
@@ -123,12 +129,13 @@ module ControlUnit(
         end
         if (mdestReg == rt)
         begin
-            if (mm2reg == 1) 
+            if (mm2reg == 0) 
                 fwb = 'b11;
             else 
                 fwb = 'b10;
         end
     end
+
 
 endmodule
 
@@ -150,14 +157,26 @@ endmodule
 module RegFile(
     input clk, wwreg,
     input [4:0] rs, rt,
-    input [5:0] wdestReg,
+    input [4:0] wdestReg,
     input [31:0] wbData,
     output reg [31:0] qa, qb
 );
     reg [31:0] registers[0:31];
     integer i;
     initial begin
-        for (i = 0; i < 32; i = i+1)
+        registers[0] = 32'h00000000;
+        registers[1] = 32'hA00000AA;
+        registers[2] = 32'h10000011;
+        registers[3] = 32'h20000022;
+        registers[4] = 32'h30000033;
+        registers[5] = 32'h40000044;
+        registers[6] = 32'h50000055;
+        registers[7] = 32'h60000066;
+        registers[8] = 32'h70000077;
+        registers[9] = 32'h80000088;
+        registers[10] = 32'h90000099;
+
+        for (i = 11; i < 32; i = i+1)
             registers[i] = 32'b0;
     end
      
@@ -234,6 +253,12 @@ module ALU(
                 r <= eqa + b;
             'b0110:
                 r <= eqa - b;
+            'b1000:
+                r <= eqa & b;
+            'b1001:
+                r <= eqa | b;
+            'b1010:
+                r <= eqa ^ b;
         endcase
     end
 endmodule
@@ -320,7 +345,7 @@ module WbMux (
 );
     always @(*)
     begin
-        if (wbData == 1)
+        if (wm2reg == 1)
             wbData = wdo;
         else
             wbData = wr;
@@ -331,7 +356,7 @@ module FwMux (
     input [31:0] q, r, mr, mdo,
     input [1:0] fwd,
     output reg [31:0] fq
-)
+);
     always @(*)
     begin
         case(fwd)
